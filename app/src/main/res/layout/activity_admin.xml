@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="ExtraText">
+
+    <!-- Pantalla de carga con ProgressBar -->
+    <FrameLayout
+        android:id="@+id/loadingScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <!-- Contenido de la ventana -->
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="408dp"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="408dp"
+        android:layout_height="52dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:gravity="center"
+            android:text="Vista Administrador"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contentLayout1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="408dp"
+        android:layout_height="176dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="277dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="410dp"
+                android:layout_height="258dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="177dp"
+                    android:src="@drawable/vistaadmin" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="178dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="Bienvenido Administrador"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="151dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="FreeArt, es una aplicacion donde se pueden ver varios artes de diversos artistas de internet, para ver mas contenido, acceda a la vista usuario."
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="347dp"
+        android:layout_height="61dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831">
+
+        <Button
+            android:id="@+id/boton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesion"
+            android:onClick="onClickCerrar" />
+
+        <!-- Nuevo botón para ir al mapa -->
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botonMapa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="irAlMapa"
+        android:text="Ver Mapa de Artistas"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="166dp"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
